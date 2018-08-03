@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21FC80CB-0A4B-43BA-9882-A1B6511C1299}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSLDtest</RootNamespace>
+    <AssemblyName>VSLDtest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\VSLDtest.PRJ\Source\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Agilent.TMFramework.InstrumentIO, Version=2.1.8910.0, Culture=neutral, PublicKeyToken=7a01cdb2a9131f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ConsoleApplication1\ConsoleApplication1\bin\Debug\Agilent.TMFramework.InstrumentIO.dll</HintPath>
+    </Reference>
+    <Reference Include="PluginSequence">
+      <HintPath>..\..\..\..\..\..\..\VSLDtest.PRJ\bin\lib\PluginSequence.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalLeakData.cs" />
+    <Compile Include="SQL_XGS.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="SQL_34970A.cs" />
+    <Compile Include="SubGroupTest\External_leak_Parameters.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="PerformanceTestManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubGroupTest\Seq5_0.cs" />
+    <Compile Include="SubGroupTest\Seq5_1.cs" />
+    <Compile Include="SubGroupTest\Seq5_11.cs" />
+    <Compile Include="SubGroupTest\Seq5_12.cs" />
+    <Compile Include="SubGroupTest\Seq5_13.cs" />
+    <Compile Include="SubGroupTest\Seq5_2.cs" />
+    <Compile Include="SubGroupTest\Seq5_4.cs" />
+    <Compile Include="SubGroupTest\Seq5_3.cs" />
+    <Compile Include="SubGroupTest\Seq5_6.cs" />
+    <Compile Include="SubGroupTest\Seq5_7.cs" />
+    <Compile Include="SubGroupTest\Seq5_8.cs" />
+    <Compile Include="SubGroupTest\Seq5_9.cs" />
+    <Compile Include="SubGroupTest\UUT_Parameters.cs" />
+    <Compile Include="TestForms\CalleakinfoDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\CalleakinfoDB.Designer.cs">
+      <DependentUpon>CalleakinfoDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormDcPowerSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormDcPowerSupply.Designer.cs">
+      <DependentUpon>FormDcPowerSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormIntCalLeak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormIntCalLeak.Designer.cs">
+      <DependentUpon>FormIntCalLeak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormExtCalLeak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormExtCalLeak.Designer.cs">
+      <DependentUpon>FormExtCalLeak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormISsn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormISsn.Designer.cs">
+      <DependentUpon>FormISsn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormLD_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormLD_Options.Designer.cs">
+      <DependentUpon>FormLD_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormSpectrometer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormSpectrometer.Designer.cs">
+      <DependentUpon>FormSpectrometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormSerialNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormSerialNumber.Designer.cs">
+      <DependentUpon>FormSerialNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\FormModelNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\FormModelNumber.Designer.cs">
+      <DependentUpon>FormModelNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForms\MyForm.Designer.cs">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForms\SerialTutorial.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomFormLibrary\CustomFormLibrary.csproj">
+      <Project>{d754dc90-8185-4cae-986d-d2918463d7c8}</Project>
+      <Name>CustomFormLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerialPortIO\SerialPortIO.csproj">
+      <Project>{05fc74ae-ee32-4896-b653-86ebe23fe62e}</Project>
+      <Name>SerialPortIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemIO\SystemIO.csproj">
+      <Project>{f4914074-c5d5-4063-b9a4-181607c34a4e}</Project>
+      <Name>SystemIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VacuumControllerIO\VacuumControllerIO.csproj">
+      <Project>{35f9fe22-947a-48d5-9aa0-be36328cf1e0}</Project>
+      <Name>VacuumControllerIO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestForms\CalleakinfoDB.resx">
+      <DependentUpon>CalleakinfoDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormDcPowerSupply.resx">
+      <DependentUpon>FormDcPowerSupply.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormIntCalLeak.resx">
+      <DependentUpon>FormIntCalLeak.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormExtCalLeak.resx">
+      <DependentUpon>FormExtCalLeak.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormISsn.resx">
+      <DependentUpon>FormISsn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormLD_Options.resx">
+      <DependentUpon>FormLD_Options.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormSpectrometer.resx">
+      <DependentUpon>FormSpectrometer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormSerialNumber.resx">
+      <DependentUpon>FormSerialNumber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\FormModelNumber.resx">
+      <DependentUpon>FormModelNumber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForms\MyForm.resx">
+      <DependentUpon>MyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
